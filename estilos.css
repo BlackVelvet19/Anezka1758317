@@ -1,0 +1,49 @@
+body{
+    background: #7dc0db;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#container{
+    width: 1200px;
+    margin: 0px auto;
+    border: 1px solid white;
+
+}
+
+header{
+    background: #0d6a90;
+}
+
+nav{
+    background: lightskyblue;
+    height: 40px;
+    border-bottom: 1px solid white;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+
+.clearfix{
+clear:both;
+}
+
+.Ima2{
+    width: 500px;
+    height: 400px;
+}
+
+.Ima3{
+    width: 150px;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+.Ima4{
+    width: 100px;
+    height: 300px;
+    transform: matrix(0.5, 0.1, 0.5, 1, 10, -2);
+}
+
+
