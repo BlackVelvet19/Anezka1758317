@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Información del Estudiante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFDDB2;
+            color: #FF9A18;
+            text-align: center;
+        }
+
+        #encabezado {
+            background-color: #FFBB65;
+            color: #824900;
+            padding: 10px;
+            cursor: move;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-weight: bold;
+        }
+
+        #pie {
+            background-color: #FFBB65;
+            color: #824900;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-weight: bold;
+        }
+
+        #resultado {
+            width: 80%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="encabezado">INFORMACIÓN OBTENIDA</div>
+    <div id="resultado">
+        <!-- Aquí se mostrará la información del estudiante -->
+    </div>
+    <div id="pie">¡TUS DATOS ESTÁN SEGUROS!</div>
+    <script>
+        // JavaScript para mostrar la información recibida en la URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const nombre = urlParams.get('nombre');
+            const correo = urlParams.get('correo');
+            const telefono = urlParams.get('telefono');
+            const password = urlParams.get('password');
+
+            const contenidoVentana = `
+                <h2>Información del Estudiante</h2>
+                <p>Nombre del estudiante: ${nombre}</p>
+                <p>Correo Institucional: ${correo}</p>
+                <p>Número Telefónico: ${telefono}</p>
+                <p>Contraseña: ${password}</p>
+            `;
+
+            document.getElementById('resultado').innerHTML = contenidoVentana;
+        });
+    </script>
+</body>
+</html>
